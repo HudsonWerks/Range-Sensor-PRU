@@ -1,16 +1,19 @@
 
 Beaglebone Black PRU code to use with HC-SR04 proximity sensor
-
 ===
+
 Forked from luigif's fine repo. Code modified by Charles A. Hamilton
 
-There are many examples around with Beaglebone PRU code to use an HC-SR04 sonar sensor, but most are outdated, do not work or require older beagles or older kernels. This repository includes everything needed to obtain a working example and can be used as a template for more complex PRU code.
+There are many examples around with Beaglebone PRU code to use an HC-SR04 sonar sensor, but most are outdated, 
+do not work or require older beagles or older kernels. This repository includes everything needed to obtain a 
+working example and can be used as a template for more complex PRU code.
 
 Prerequisites:
 
 	* Beaglebone Black with debian 3.8.13 bone47 or higher
 	* HC-SR04 sensor
-	* Dev tools (gcc, pasm, dtc, etc.) that are already included in BBB latest images. If you're missing them, please upgrade your firmware at http://beagleboard.org/latest-images/.
+	* Dev tools (gcc, pasm, dtc, etc.) that are already included in BBB latest images. If you're missing them, 
+	please upgrade your firmware at http://beagleboard.org/latest-images/.
 	* Resistors: 1x 1k; 1x 2k
 	* 5V power supply
 
@@ -48,7 +51,7 @@ NOTE: The resistors are important. Since the sensor emits a 5V signal, and the B
 
 	./Range-Sensor-PRU
 
-	Note: After a first successful "make install", before running the hcsr04 program, 
+	Note: After a first successful "make install", before running the Range-Sensor-PRU program, 
 	you can load the driver with the install-driver.sh script.
 	Depending on your needs, you can configure your operating system to run the 
 	install-driver.sh script at boot.
