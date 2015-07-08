@@ -9,7 +9,7 @@
   version = "00A0";
 
   exclusive-use =
-    "P8_12", "P8_11",
+    "<TRIGGER PIN HERE>", "<ECHO PIN HERE>",
     "GPIO44", "GPIO45";
 
   fragment@0 {
