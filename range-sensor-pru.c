@@ -32,7 +32,8 @@ int main(void) {
 	printf(">> Executing Range Sensor PRU code\n");
 	prussdrv_exec_program(0, "range-sensor-pru.bin");
 
-	/* Get measurements from the range sensor. This will take 20 readings then quit. Change the number if you want more or less readings.  */
+	/* Get measurements from the range sensor.  */
+	//This will take 20 readings then quit. Change the number if you want more or less readings.
 	int i = 0;
 	while (i++ < 20) {
 		
