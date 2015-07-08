@@ -21,7 +21,6 @@ Hardware configuration:
 	* GND			P9_1 or P9_2	GND
 	* VCC			P9_5 or P9_6	VDD_5V
 	
-	
 ### Schematic:
 	
 ![Schematic](hc-sr04.png?raw=true)
@@ -32,7 +31,7 @@ NOTE: The resistors are important. Since the sensor emits a 5V signal, and the B
 
 ### To download the complete package to your Beaglebone Black:
 
-# git clone https://github.com/HudsonWerks/Range-Sensor-PRU.git
+	git clone https://github.com/HudsonWerks/Range-Sensor-PRU.git
 
 ### To build:
  	
