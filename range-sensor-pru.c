@@ -16,7 +16,7 @@ int main(void) {
 	/* Open PRU Interrupt */
 	if (prussdrv_open (PRU_EVTOUT_0)) {
 		// Handle failure
-		fprintf(stderr, ">> PRU open failed\n");
+		fprintf(stderr, ">> The PRU failed to open\n");
 		return 1;
 	}
 
@@ -29,10 +29,10 @@ int main(void) {
 	unsigned int *pruData = (unsigned int *) pruDataMem;
 
 	/* Execute code on PRU */
-	printf(">> Executing HCSR-04 code\n");
-	prussdrv_exec_program(0, "hcsr04.bin");
+	printf(">> Executing Range Sensor PRU code\n");
+	prussdrv_exec_program(0, "range-sensor-pru.bin");
 
-	/* Get measurements */
+	/* Get measurements from the range sensor. This will take 20 readings then quit. Change the number if you want more or less readings.  */
 	int i = 0;
 	while (i++ < 20) {
 		
