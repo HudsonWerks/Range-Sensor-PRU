@@ -27,10 +27,10 @@ Hardware configuration:
 
 NOTE: The resistors are important. Since the sensor emits a 5V signal, and the Beaglebone Black's input pins are only 3.3V, using resistors or voltage converters is crucial for preventing damage to your board.
 	
-### Log in as root
 
-### To download the complete package to your Beaglebone Black:
+### Download the complete package to your Beaglebone Black:
 
+	Log in as root
 	git clone https://github.com/HudsonWerks/Range-Sensor-PRU.git
 
 ### To build:
