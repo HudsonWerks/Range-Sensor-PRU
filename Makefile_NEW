@@ -8,7 +8,7 @@ range-sensor-pru.bin: range-sensor-pru.p
 	$(PRU_ASM) -b range-sensor-pru.p
 
 range-sensor-pru: range-sensor-pru.c
-	@echo "\n>> Compiling range-sensor-pru example"
+	@echo "\n>> Compiling Range Sensor Pru example"
 	$(CC) $(CFLAGS) -c -o range-sensor-pru.o range-sensor-pru.c
 	$(CC) -lpthread -lprussdrv -o range-sensor-pru range-sensor-pru.o
 
