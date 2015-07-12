@@ -2,7 +2,7 @@
 Beaglebone Black PRU code to use with HC-SR04 proximity sensor
 ===
 
-Forked from luigif's fine repo. Code and hardware design modified by Charles A. Hamilton
+Forked from luigif's fine repo. Code and hardware design modified by Charles A. Hamilton, HudsonWerks LLC.
 
 There are many examples around with Beaglebone PRU code to use an HC-SR04 sonar sensor, but most are outdated, 
 do not work or require older beagles or older kernels. This repository includes everything needed to obtain a 
