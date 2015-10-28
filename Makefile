@@ -2,15 +2,18 @@ CC = gcc
 CFLAGS = -Wall
 PRU_ASM = pasm
 
+all: rangepru.bin rangepru
 
-range-sensor-pru.bin: range-sensor-pru.p
-	@echo "\n>> Generating PRU binary"
-	$(PRU_ASM) -b range-sensor-pru.p
+rangepru.bin: rangepru.p
+        @echo "\n>> Generating PRU binary"
+        $(PRU_ASM) -b rangepru.p
 
-range-sensor-pru: range-sensor-pru.c
-	@echo "\n>> Compiling Range Sensor Pru example"
-	$(CC) $(CFLAGS) -c -o range-sensor-pru.o range-sensor-pru.c
-	$(CC) -lpthread -lprussdrv -o range-sensor-pru range-sensor-pru.o
+rangepru: rangepru.c
+        @echo "\n>> Compiling Range Sensor Pru example"
+        $(CC) $(CFLAGS) -c -o rangepru.o rangepru.c
+        $(CC) -lpthread -lprussdrv -o rangepru rangepru.o
 
 clean:
-	rm -rf range-sensor-pru range-sensor-pru.o range-sensor-pru.bin
+        rm -rf rangepru rangepru.o rangepru.bin
+
+install: rangepru.bin rangepru
